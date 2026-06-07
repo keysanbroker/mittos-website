@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mittos - Premium Trout Producer Since 1985</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #17324D;
+            background-color: #F7FAFC;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: #FFFFFF;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #003B73;
+            height: 60px;
+            cursor: pointer;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+            max-width: 150px;
+        }
+
+        .logo i {
+            color: #F58220;
+            font-size: 28px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #17324D;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #F58220;
+        }
+
+        .cta-button {
+            background: #F58220;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            height: 46px;
+            line-height: 22px;
+        }
+
+        .cta-button:hover {
+            background: #E67300;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 130, 32, 0.3);
+        }
+
+        .language-selector {
+            background: none;
+            border: none;
+            color: #17324D;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #17324D;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(90deg, rgba(0, 35, 70, 0.88) 0%, rgba(0, 59, 115, 0.55) 45%, rgba(0, 59, 115, 0.10) 100%), url('hero.png') center 30%/cover no-repeat;
+            color: white;
+            padding: 120px 24px;
+            text-align: left;
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 1120px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            opacity: 0.95;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-button {
+            padding: 14px 32px;
+            border-radius: 10px;
+            border: none;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: 46px;
+            line-height: 18px;
+        }
+
+        .hero-button.primary {
+            background: #F58220;
+            color: white;
+        }
+
+        .hero-button.primary:hover {
+            background: #E67300;
+            transform: translateY(-2px);
+        }
+
+        .hero-button.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .hero-button.secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Stats Card */
+        .stats-section {
+            position: relative;
+            padding: 0 24px -40px;
+            text-align: center;
+        }
+
+        .stats-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin: -80px auto 0;
+            max-width: 1120px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-item {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-right: 1px solid #E8EEF5;
+        }
+
+        .stat-item:last-child {
+            border-right: none;
+        }
+
+        .stat-icon {
+            font-size: 48px;
+            min-width: 60px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+            flex-shrink: 0;
+            color: #666;
+            background: transparent;
+        }
+
+        .stat-item:nth-child(1) .stat-icon {
+            color: #666;
+        }
+
+        .stat-item:nth-child(2) .stat-icon {
+            color: #666;
+        }
+
+        .stat-item:nth-child(3) .stat-icon {
+            color: #666;
+        }
+
+        .stat-item:nth-child(4) .stat-icon {
+            color: #666;
+        }
+
+        .stat-content {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-size: 24px;
+            font-weight: 800;
+            color: #003B73;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #6B7C8F;
+            margin-top: 4px;
+        }
+
+        /* Products Section */
+        .section {
+            padding: 100px 24px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: #003B73;
+            text-align: center;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #EAF6FB 0%, #D4E8F7 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #003B73;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .product-arrow {
+            color: #005BAA;
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-arrow {
+            transform: translateX(4px);
+        }
+
+        /* Production Process */
+        .process-section {
+            background: #003B73;
+            color: white;
+            padding: 100px 24px;
+        }
+
+        .process-section .section-title {
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 24px;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .process-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 60%;
+            width: 40%;
+            height: 2px;
+            background: #18B9B0;
+        }
+
+        .process-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(24, 185, 176, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+            color: #18B9B0;
+            border: 2px solid #18B9B0;
+        }
+
+        .process-title {
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'Manrope', sans-serif;
+            margin-bottom: 8px;
+        }
+
+        .process-description {
+            font-size: 13px;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        /* Certificates Section */
+        .certificates-section {
+            background: white;
+            padding: 100px 24px;
+        }
+
+        .certificates-content {
+            max-width: 1120px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .certificate-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .certificate-logo {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #EAF6FB;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            font-size: 48px;
+            color: #005BAA;
+            font-weight: 700;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .certificate-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: #003B73;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .certificates-description {
+            font-size: 14px;
+            color: #6B7C8F;
+            padding-top: 20px;
+            border-top: 1px solid #E8EEF5;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(90deg, rgba(0, 59, 115, 0.9) 0%, rgba(0, 35, 70, 0.8) 100%), url('export-ship.jpg') center/cover no-repeat;
+            color: white;
+            padding: 100px 24px;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 16px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-button-large {
+            background: #F58220;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 10px;
+            border: none;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-button-large:hover {
+            background: #E67300;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: #003B73;
+            color: white;
+            padding: 60px 24px 40px;
+        }
+
+        .footer-container {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .footer-about p {
+            font-size: 13px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .footer-section h4 {
+            font-size: 14px;
+            font-family: 'Manrope', sans-serif;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #EAF6FB;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #F58220;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 80px 24px;
+                min-height: auto;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .stats-card {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                padding: 24px;
+                margin-top: -60px;
+            }
+
+            .stat-item {
+                border-right: none;
+                border-bottom: 1px solid #E8EEF5;
+                padding: 16px;
+            }
+
+            .stat-item:nth-child(2n) {
+                border-right: none;
+            }
+
+            .stat-item:nth-child(n+3) {
+                border-bottom: none;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .process-item:not(:last-child)::after {
+                display: none;
+            }
+
+            .certificates-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .cta-section h2 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .stat-number {
+                font-size: 20px;
+            }
+
+            .product-card {
+                border-radius: 12px;
+            }
+
+            .product-image {
+                height: 150px;
+                font-size: 60px;
+            }
+
+            .certificates-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certificate-logo {
+                width: 100px;
+                height: 100px;
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo" style="text-decoration: none;">
+                    <img src="mtlogo.png" alt="Mittos Logo">
+                </a>
+                <ul>
+                    <li><a href="#home">Anasayfa</a></li>
+                    <li><a href="#about">Hakkımızda</a></li>
+                    <li><a href="#products">Ürünler</a></li>
+                    <li><a href="#process">Üretim</a></li>
+                    <li><a href="#quality">Kalite</a></li>
+                    <li><a href="#sustainability">Sürdürülebilirlik</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <button class="language-selector">
+                        <i class="fas fa-globe"></i> TR
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <button class="cta-button">Teklif Al</button>
+                </div>
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Premium Trout<br>Producer Since 1985</h1>
+            <p>Türkiye'den dünyaya, yüksek kaliteli alabalık üretimi ve güvenilir tedarik.</p>
+            <div class="hero-buttons">
+                <button class="hero-button primary">İletişime Geçin</button>
+                <button class="hero-button secondary">Ürünlerimizi İnceleyin</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Card -->
+    <section class="stats-section">
+        <div class="stats-card">
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fas fa-calendar"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number">1985</div>
+                    <div class="stat-label">Kuruluş</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number">10.000</div>
+                    <div class="stat-label">Ton Yıllık İşleme Kapasitesi</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Yıllık Deneyim</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Kıta İhracat Ağı</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section" id="products">
+        <div class="container">
+            <h2 class="section-title">Ürünlerimiz</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="whole-trout.jpg" alt="Whole Trout">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Whole Trout</span>
+                        <span class="product-arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="smoked-trout.jpg" alt="Smoked Trout">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Smoked Trout</span>
+                        <span class="product-arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="trout-fillet.jpg" alt="Trout Fillet">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Trout Fillet</span>
+                        <span class="product-arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="salmon-trout.jpg" alt="Salmon Trout">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Salmon Trout</span>
+                        <span class="product-arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="iqf-products.jpg" alt="IQF Products">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">IQF Products</span>
+                        <span class="product-arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="private-label.jpg" alt="Private Label Products">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Private Label Products</span>
+                        <span class="product-arrow">→</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Production Process -->
+    <section class="process-section" id="process">
+        <div class="container">
+            <h2 class="section-title">Üretim Sürecimiz</h2>
+            <div class="process-timeline">
+                <div class="process-item">
+                    <div class="process-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4 class="process-title">Yetiştiricilik</h4>
+                    <p class="process-description">Doğal ve sağlık çevrim</p>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-icon">
+                        <i class="fas fa-scissors"></i>
+                    </div>
+                    <h4 class="process-title">Hasat</h4>
+                    <p class="process-description">Doğru zamanda hasat</p>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4 class="process-title">İşleme</h4>
+                    <p class="process-description">Modern tesislerde işleme</p>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4 class="process-title">Kalite Kontrol</h4>
+                    <p class="process-description">Sıkı kalite kontrolleri</p>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h4 class="process-title">Paketleme</h4>
+                    <p class="process-description">Hıyarik ambalajlama</p>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h4 class="process-title">İhracat</h4>
+                    <p class="process-description">Dünyaya dışa birz</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="certificates-section" id="quality">
+        <div class="certificates-content">
+            <h2 class="section-title">Sertifikalarımız</h2>
+            <div class="certificates-grid">
+                <div class="certificate-item">
+                    <div class="certificate-logo">BRC</div>
+                    <div class="certificate-name">BRC Certified</div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-logo">IFS</div>
+                    <div class="certificate-name">IFS Food</div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-logo">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <div class="certificate-name">HACCP</div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-logo">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="certificate-name">GLOBAL G.A.P.</div>
+                </div>
+            </div>
+            <p class="certificates-description">Uluslararası gıda güvenliği standartları, üretimin her aşamasında uygulanmaktadır.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="cta-content">
+            <h2>Güvenilir bir alabalık tedarikçisi mi arıyorsunuz?</h2>
+            <p>Dünya standartlarında üretim, zamanında teslimat ve esnek çözümler için bizimle iletişime geçin.</p>
+            <button class="cta-button-large">Teklif Al</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Mittos</h3>
+                    <p>1985'ten beri yüksek kaliteli alabalık üretimi ve global pazarlara güvenilir tedarik.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Şirket</h4>
+                    <ul>
+                        <li><a href="#about">Hakkımızda</a></li>
+                        <li><a href="#products">Ürünler</a></li>
+                        <li><a href="#process">Üretim</a></li>
+                        <li><a href="#quality">Kalite</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Bağlantılar</h4>
+                    <ul>
+                        <li><a href="#contact">İletişim</a></li>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                        <li><a href="#">Şartlar ve Koşullar</a></li>
+                        <li><a href="#">KVKK</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <ul>
+                        <li><a href="mailto:info@mittos.com.tr">info@mittos.com.tr</a></li>
+                        <li><a href="tel:+90258">+90 (258) 571 60 60</a></li>
+                        <li>Denizli / Çameli</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mittos. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUl = document.querySelector('nav ul');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navUl.style.display = navUl.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+
+        // Sticky header shadow on scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
+            }
+        });
+    </script>
+</body>
+</html>
